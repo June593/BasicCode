@@ -11,6 +11,7 @@ public class QuickSort {
                 int temp = arr[i];
                 arr[i] = arr[j];
                 arr[j] = temp;
+
             }
         }
         int temp = arr[j + 1];

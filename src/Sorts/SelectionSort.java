@@ -17,7 +17,6 @@ public class SelectionSort {
             for (int j = i; j <= high; j++) {
                 if (arr[j] < arr[i]) {
                     index_min = j;
-
                 }
 
             }
@@ -25,11 +24,7 @@ public class SelectionSort {
             int temp = arr[i];
             arr[i] = arr[index_min];
             arr[index_min] = temp;
-
-
         }
-
-
     }
 
     static void printArray(int arr[]) {

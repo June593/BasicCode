@@ -9,25 +9,20 @@ package Sorts;
  */
 
 public class InsertionSort {
-    static void sort(int arr[], int low, int high) {
+    static void sort(int[] arr, int low, int high) {
 
         for (int i = 1; i <= high; i++) {
-            for (int j = 0; j < i; j++) {
-                if (arr[i] < arr[j]) {
-                    int temp = arr[i];
-                    arr[i] = arr[j];
-                    arr[j] = temp;
-
-                }
-
+            int key = arr[i];
+            int j = i - 1;
+            while (j >= 0 && arr[j] > key) {
+                arr[j + 1] = arr[j];
+                j--;
             }
-
+            arr[j + 1] = key;
         }
-
-
     }
 
-    static void printArray(int arr[]) {
+    static void printArray(int[] arr) {
         int n = arr.length;
         for (int i = 0; i < n; ++i)
             System.out.print(arr[i] + " ");
@@ -38,7 +33,7 @@ public class InsertionSort {
     public static void main(String[] args) {
 
 
-        int arr[] = {4, 3, 2, 5, 1};
+        int arr[] = {3, 4, 2, 5, 1};
         int n = arr.length;
 
         System.out.println("Mảng ban đầu:");
